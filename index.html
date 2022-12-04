@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rania Rejdal</title>
+	<link href = "styles.css" rel = "stylesheet" type = "text/css">
+  </head>
+  <body>
+    <header id=about>
+    	<nav class=uppercase>
+    		<a href=#about title="Jump to Header">About</a>
+    		<a href=#experience title="Jump to Work Experience">Work Experience</a>
+    		<a href=#education title="Jump to Education">Education</a>
+    		<a href=#contact title="Jump to Contact Information">Contact</a>
+    		<a class="btn download" href="resources/resume.pdf" title="Download Resume" target=_blank>Download Resume</a>
+    	</nav>
+    </header>
+
+    <div class=centered-content>
+    	<div class=col-narrow>
+    		<img id=profile-image src="Resources/your-profile-pic.jpg" alt="Your Name">
+    	</div>
+    	<div class=col-wide>
+    		<h1>Rania Rejdal</h1>
+    		<h2>Your Position</h2>
+    		<p>Short description of yourself.</p>
+    	</div>
+    </div>
+
+    <main>
+    	<section id = experience>
+    		<div class=centered-content>
+    			<h2>Work Experience</h2>
+    			<div class=job>
+    				<div class=col-narrow>
+    					<h3>iOS Application Developer</h3>
+    					<p class=uppercase>Miltera Machining Research Corp.</p>
+    					<p>September 2021 - August 2022</p>
+    				</div>
+    				<div class=col-wide>
+    					<ul>
+    						<li>Published custom manufacturing task management mobile app on App 
+								Store for inner-business usage.</li>
+    						<li>App allowed users to track and manage parts easily and efficiently.</li>
+    						<li>User-friendly app improved communication between departments, reducing
+								production time.</li>
+							<li>Automated functionalities include completing parts, trays splitting, holding
+								and scrapping parts, scanning trays with QR code, pie-chart milestones completion 
+								overview with filters.</li>
+    					</ul>
+    				</div>
+    			</div>
+    			<div class=job>
+					<div class=col-narrow>
+    					<h3>iOS Front End Developer</h3>
+    					<p class=uppercase>Haneco Lighting Canada Inc.</p>
+    					<p>January 2021 - April 2021</p>
+    				</div>
+    				<div class=col-wide>
+    					<ul>
+    						<li>Developed iOS appraisals app for iPad, allowing fixtures lighting data 
+								input and fixtures solutions generation.</li>
+    						<li>Developed logic to store, remove, edit, retrieve .json and .jpeg data 
+								from Amazon S3 database.</li>
+    						<li>Conducted regular QA testing with team members weekly.</li>
+    					</ul>
+    				</div>
+				</div>
+    			<div class=job>
+					<div class=col-narrow>
+    					<h3>Software Developer</h3>
+    					<p class=uppercase>Avidrone Aerospace Inc.</p>
+    					<p>September 2019 - December 2019</p>
+    				</div>
+    				<div class=col-wide>
+    					<ul>
+    						<li>Documented current telemetry protocol which details all messages sent
+								between UAV and ground station.</li>
+    						<li>Created Windows Qt C++ app to interpret, filter and output telemetry 
+								messages via serial or from saved HEX files.</li>
+    						<li>Developed an app which calculates battery flight time for the desired 
+								payload during a mission using Qt Creator.</li>
+    					</ul>
+    				</div>
+				</div>
+    		</div>
+    	</section>
+    </main>
+
+    <section id = education>
+      <div class=slide-changer id=left-slide onclick=changeSlide(-1)>&lang;</div>
+        <script>
+           var slideIndex = 1;
+           showSlide(slideIndex);
+
+           function changeSlide(n) {
+              showSlide(slideIndex += n);
+           }
+
+           function showSlide(n) {
+               var slides = document.getElementsByClassName("job");
+               var i;
+
+               for(i = 0; i < slides.length; i++) {
+                   slides[i].className = "job";
+               }
+
+               if(n > slides.length) {
+                   slideIndex = 1;
+               }
+
+               else if(n < 1) {
+                   slideIndex = slides.length;
+               }
+
+               slides[slideIndex - 1].className = "job active";
+            }
+        </script>
+      <div class=slide-changer id=right-slide onclick=changeSlide(1)>&rang;</div>
+    	<div class=centered-content>
+    		<h2>Education</h2>
+
+    		<h3>Ontario Tech University</h3>
+    		<p class=designation>BSc Hons Coop - Computer Science (Comprehensive)</p>
+    		<p>2022 - Present (First Year)</p>
+
+    		<h3>University of Waterloo</h3>
+    		<p class=designation>BASc Hons Coop - Mechatronics Engineering</p>
+    		<p>2017 - 2021 (Third Year)</p>
+    	</div>
+    </section>
+
+    <a id=toTop href=#about title="Jump to Top">^</a>
+
+    <footer>
+    	<div class=centered-content id=contact>
+    		<h2>Let's Keep in Touch!</h2>
+
+    		<div class=content-info>
+    			<a href="mailto:your-email@gmail.com">rania.rejdal@ontariotechu.net</a>
+    			<a href="https://www.linkedin.com/in/your-name-*********/" target="_blank">https://www.linkedin.com/in/rania-rejdal/</a>
+    			<a href="https://www.youtube.com/your.name.***" target="_blank">Youtube</a>
+    		</div>
+
+    		<p>Copyright 2022 Rania Rejdal</p>
+    	</div>
+    </footer>
+
+  </body>
+</html>
