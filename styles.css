@@ -1,0 +1,185 @@
+/* Global Styles */
+
+html { /* the following 2 rules implement a border-box "fix" */
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body { /* applies to all content unless overwritten */
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; /* leaves no white border around the content */
+}
+
+#toTop {
+    font-size: 50px;
+    color: black; /* need to set the colour of this bc it defaults to colour of links */
+    text-decoration: none; /* remvoes underline */
+    position: fixed; /* fixes it to a certain spot on the screen */
+    right: 50px;
+    bottom: 0;
+}
+
+h1, h2 {
+    font-family: 'Courgette', cursive;
+    color: #166088;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-top: 0; /* to give an appropiate space between the top of headings and the start of new colour for section */
+}
+
+.centered-content { /* centers the div with this class name with the background/screen */
+    max-width: 60em; /* about 950px */
+    margin: 0 auto; /* sets the top and bottom margins to 0, and the right and left to half of the screen width miuns element width (ultimately centering it) */
+    padding: 50px; /* "pushes" the content 50px more towards the center from all directions */
+    overflow: auto; /* self-clears anytime I add a float to a "centered-content" section */
+}
+
+.col-narrow { /* these 4 rules create 2 columns in whatever div they are contained in, one narrow and one wide */
+    width: 33.34%;
+    float: left;
+}
+.col-wide { /* both of these are floated to the left to align with each other and are cleared after since they are always contained in a "centered-content" div */
+    width: 66.66%;
+    float: left;
+}
+
+.uppercase { /* the text in div's with this class name all become uppercase */
+    text-transform: uppercase;
+}
+
+/* Header and Footer */
+
+header, footer {
+    background: #6F9283;
+}
+
+header {
+    padding-top: 10px; /* makes sure the nav does not cover the image in the header */
+}
+
+nav {
+    background: #6F9283;
+    text-align: center;
+    font-size: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden; /* self-clear */
+}
+
+nav a {
+    color: black; /* need to set the colour of these bc they default to colour of links */
+    padding: 1rem; /* helps to space out the nav links */
+    display: inline-block;  /* ensures that the padding is added properly, since they are originally links (inline) */
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none; /* removes the underline */
+}
+
+nav a:hover { /* adds an underline when user hovers over link */
+    text-decoration: underline;
+}
+
+.btn {
+    color: black;
+    text-decoration: none; /* removes underline */
+    background: #CDC6A5;
+}
+
+.download {
+    position: absolute; /* will be contained in its positioned parent element. Allows it to bepositioned at the far side of the nav */
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+/* small personal aesthetic styles: */
+
+header h1, header h2 {
+    margin: 0; /* overwrites the h2 margin style from before */
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 15px;
+}
+
+header p {
+    padding-top: 10px;
+}
+
+#profile-image {
+    max-width: 100%;
+    border-radius: 50%; /* makes the image display as a circle */
+}
+
+footer {
+    text-align: center;
+}
+
+footer h2, footer p {
+    color: #166088;
+}
+
+footer a { /* the following two lines simply give a different type of styling to the links in the footer */
+    color: white;
+}
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Experience */
+
+#experience {
+    background: #CDC6A5;
+}
+
+h3 ~ p {
+    margin: 0; /* makes company and dates closer together, as well as degree and additional information in education */
+}
+
+.job {
+    display: none; /* by default, all jobs are set to not display */
+}
+
+.job.active {
+    display: block; /* when one job is called on, it displays */
+}
+
+.slide-changer {
+    font-size: 5rem;
+    margin: 7.5% auto; /* roughly, vertically aligns the slide change "buttons" */
+    cursor: pointer; /* makes the cursor change to a pointer so that the user knows they can click on it */
+}
+
+#left-slide {
+    float: left; /* allows itself to flow to the left of the work experience content */
+    margin-left: 2%;
+}
+
+#right-slide {
+    float: right; /* allows itslef to flow to the right of the work experience content */
+    margin-right: 2%;
+}
+
+/* Education */
+
+#education {
+    /* the colour used in the rgb values below is #8D9F87 */
+    background: linear-gradient(rgba(141, 159, 135, 0.7), rgba(141, 159, 135, 0.7)), url(Resources/education-background.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.designation {
+    margin-top: 0; /* to make the school and designation closer */
+}
